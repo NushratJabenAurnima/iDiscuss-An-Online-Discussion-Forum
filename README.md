@@ -95,7 +95,7 @@ To import the SQL dump file into your MySQL database, follow these steps:
 
 1. **Open PHPMyAdmin:** Log in to PHPMyAdmin from your local server or hosting provider.
 2. **Create a New Database:** 
-   - In PHPMyAdmin, create a new database by entering a name (e.g., `idiscuss_db`).
+   - In PHPMyAdmin, create a new database by entering a name (e.g., `idiscuss`).
    - Click the "Create" button.
 3. **Import the SQL Dump:**
    - Click on the "Import" tab within your newly created database.
