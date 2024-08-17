@@ -89,9 +89,3 @@ PHPMailer is integrated for handling email notifications, primarily for password
 - **Backend:** PHP (Object-Oriented Programming)
 - **Database:** MySQL
 - **Email Handling:** PHPMailer for email notifications and password recovery
-
-## How to Import SQL Dumps
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/idiscuss.git
