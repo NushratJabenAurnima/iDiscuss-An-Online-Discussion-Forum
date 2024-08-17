@@ -92,9 +92,3 @@ The use of PHPMailer adds an additional layer of professionalism and security to
 - **Backend:** PHP (Object-Oriented Programming)
 - **Database:** MySQL
 - **Email Handling:** PHPMailer for sending email notifications and password reset links
-
-## How to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/idiscuss.git
