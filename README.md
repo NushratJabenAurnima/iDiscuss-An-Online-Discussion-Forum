@@ -1,94 +1,97 @@
 # iDiscuss: An Online Discussion Forum
 
-iDiscuss is a full-stack web application developed as an online forum for users to discuss various topics. It allows users to post queries, respond to discussions, and engage in meaningful conversations across a wide range of subjects. Built with PHP, MySQL, and Bootstrap, iDiscuss also incorporates PHPMailer for secure and reliable email functionality, such as password recovery.
+iDiscuss is a full-stack web application developed as an online forum for users to discuss various topics. It allows users to post queries, respond to discussions, and engage in meaningful conversations across a wide range of subjects. Built with PHP (Object-Oriented Programming), MySQL, and Bootstrap, iDiscuss also incorporates PHPMailer for secure and reliable email functionality, such as password recovery. The sign-up form includes validation for each field to ensure data accuracy and security.
 
 ## Project Overview
 
-The aim of this project is to create a simple, user-friendly online platform that supports threaded discussions. Users can register, log in, search for discussions, participate in conversations, and reset their passwords using a secure email-based process.
+The goal of this project is to create an easy-to-use platform for threaded discussions. Users can register, log in, search for threads, post comments, and manage their discussions. iDiscuss also features secure password recovery through email using PHPMailer.
 
 ### Features
 
 - **User Registration and Authentication:** 
-  - Users can sign up, log in, and log out securely.
-  - Passwords are hashed for secure storage.
-  - A password reset feature is available via email, powered by PHPMailer.
+  - Users can securely sign up, log in, and log out.
+  - Each sign-up field undergoes form validation to ensure correct input.
+  - Passwords are securely hashed before being stored in the database.
+  - Password recovery is available via email, powered by PHPMailer.
 
 - **Discussion Threads:**
-  - Users can post new discussion threads with a title and description.
-  - Comments and responses can be posted within discussion threads.
-  - Threads are categorized based on topics, allowing users to filter discussions by interest.
-  - Users can update or delete their own threads.
-  - When a thread is deleted, all its corresponding comments are also removed.
-
-- **Comments Management:**
-  - Users can post comments on threads.
-  - Users can update or delete their own comments.
-  - Only the creator of a comment or thread can modify or remove their own content.
+  - Users can post new threads with a title and description.
+  - Users can edit or delete their own threads.
+  - When a thread is deleted, all related comments are also removed.
+  
+- **Comment Management:**
+  - Users can post comments within threads.
+  - Users can edit or delete their own comments.
+  - Only the creator of a thread or comment can modify or delete their own content.
 
 - **Search Functionality:**
-  - Users can search through discussion threads by keywords or phrases.
-  - If no relevant threads are found, the user will receive a message indicating no matches.
+  - Users can search through threads by keywords or phrases.
+  - If no matching threads are found, a message will indicate no results.
 
 - **Responsive Design:**
-  - The website is mobile-responsive, ensuring a seamless user experience across devices.
+  - The site is fully mobile-responsive for seamless usability across devices.
 
 ## Functional Requirements
 
 1. **User Authentication:**
-   - **Sign up:** Users can register by providing a username, email, and password.
+   - **Sign up:** Users can register with a username, email, and password. Each form field is validated.
    - **Log in:** Users can log in with their registered email and password.
-   - **Log out:** Users can log out from the website securely.
+   - **Log out:** Secure logout functionality is provided.
 
 2. **Discussion Forum:**
-   - **Posting:** Users can create new discussion threads with relevant topics and details.
-   - **Commenting:** Users can reply to existing threads and engage in conversations.
+   - **Posting:** Users can create threads under specific topics.
+   - **Commenting:** Users can respond to existing threads with comments.
    - **Thread Management:** Users can update or delete their own threads.
    - **Comment Management:** Users can update or delete their own comments.
-   - **Thread and Comment Deletion:** Deleting a thread will also remove all comments associated with it.
+   - **Thread Deletion:** Deleting a thread removes all corresponding comments.
 
 3. **Search System:**
    - **Search Bar:** Users can search for threads by title or content.
-   - **Search Results:** The search functionality returns all matching threads, and if none are found, a message will be displayed.
+   - **Search Results:** If no threads match the search, a message is displayed.
 
 4. **Password Management:**
-   - **Reset Password:** Users can initiate a password reset process by providing their registered email.
-   - **Email Notifications:** A reset link is sent via email, and users can securely update their passwords.
+   - **Reset Password:** Users can initiate a password reset via email.
+   - **Email Notifications:** PHPMailer sends secure reset links.
 
 5. **Notification System:**
-   - **Email Alerts:** PHPMailer is used to send various notifications, such as password reset links, ensuring email reliability and security.
+   - **Email Alerts:** PHPMailer ensures that email notifications (e.g., password reset) are sent securely and reliably.
 
 ## Non-Functional Requirements
 
 1. **Security:**
-   - **Password Hashing:** All passwords are securely hashed using PHP's password hashing functions before being stored in the database.
-   - **XSS Prevention:** Measures have been taken to sanitize user input, preventing Cross-Site Scripting (XSS) attacks.
+   - **Password Hashing:** Passwords are hashed using PHP's secure password hashing algorithms before storage.
+   - **XSS Prevention:** User input is sanitized to prevent Cross-Site Scripting (XSS) attacks.
 
 2. **Performance:**
-   - **Efficient Query Handling:** The MySQL database is optimized to ensure that the search functionality and thread loading are fast and efficient, even with large datasets.
+   - **Efficient Database Queries:** MySQL is optimized for fast retrieval of search results and thread loading.
 
 3. **Usability:**
-   - **Simple UI:** The website has a clean and intuitive user interface that allows users of all technical levels to easily engage with the platform.
-   - **Mobile-Responsive:** The Bootstrap framework ensures compatibility with various screen sizes, enhancing usability across different devices.
+   - **User-Friendly Interface:** The design is intuitive for users of all technical levels.
+   - **Responsive Design:** Bootstrap ensures optimal usability on various devices.
 
 4. **Reliability:**
-   - **Robust Email Functionality:** PHPMailer ensures that all password reset emails are sent reliably and securely, with proper error handling in case of failure.
+   - **Email Reliability:** PHPMailer guarantees the secure delivery of password reset emails.
 
 5. **Scalability:**
-   - The website is designed to accommodate a growing user base without performance degradation. The modular structure of the code makes it easy to add new features or modify existing ones.
+   - The application is built to scale with increased users, allowing for easy integration of new features.
 
 ## Usage of PHPMailer
 
-PHPMailer is utilized for sending automated emails to users, primarily for the password reset functionality. Here is a brief overview of its usage:
+PHPMailer is integrated for handling email notifications, primarily for password recovery. Here's an overview of its key usage:
 
-- **Email Sending:** PHPMailer sends emails via an SMTP server, ensuring that all communications are encrypted and secure.
-- **Password Reset:** When a user initiates the "Forgot Password" process, PHPMailer generates an email containing a unique reset link. The user can click this link to securely update their password.
-- **SMTP Configuration:** The website's PHPMailer integration is configured to use secure SMTP servers, ensuring that email delivery is reliable and resistant to spoofing or interception.
-
-The use of PHPMailer adds an additional layer of professionalism and security to the website's email handling system, making it an essential part of the overall architecture.
+- **Email Sending:** Emails are sent via a secure SMTP server.
+- **Password Reset:** Users receive an email containing a unique link to reset their passwords.
+- **SMTP Configuration:** PHPMailer is configured to use secure SMTP servers to ensure reliable and secure email delivery.
 
 ## Technologies Used
 
 - **Frontend:** HTML, CSS (Bootstrap for responsive design), JavaScript
 - **Backend:** PHP (Object-Oriented Programming)
 - **Database:** MySQL
-- **Email Handling:** PHPMailer for sending email notifications and password reset links
+- **Email Handling:** PHPMailer for email notifications and password recovery
+
+## How to Import SQL Dumps
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/idiscuss.git
