@@ -102,7 +102,7 @@ To import the SQL dump file into your MySQL database, follow these steps:
    - Choose the SQL file (`idiscuss.sql`) from your file system.
    - Click "Go" to start the import process.
 4. **Verify Tables:**
-   - Once imported, you should see the relevant tables (e.g., `users`, `threads`, `comments`,`categories`) within the database.
+   - Once imported, you should see the relevant tables (e.g., `users`, `threads`, `comments`, `categories`) within the database.
 
 That's it! Your database should now be ready to use with the iDiscuss project.
 
