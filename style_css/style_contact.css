@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.container .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    flex-wrap: nowrap;
+    /* Ensures that the columns don't wrap, keeping them side by side */
+}
+
+.row section {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    flex-basis: 48%;
+    /* Take up nearly half of the available space */
+    min-width: 320px;
+    margin-right: 2%;
+}
+
+.right {
+    flex-basis: 48%;
+    /* Take up nearly half of the available space */
+}
+
+.contactTitle h2 {
+    margin-bottom: 10px;
+}
+
+.contactInfo .iconGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.iconGroup .icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid limegreen;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.iconGroup .icon i {
+    font-size: 20px;
+    color: #333;
+}
+
+.socialMedia {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.socialMedia a {
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.socialMedia a i {
+    color: white;
+    font-size: 18px;
+    transition-delay: 0.4s;
+}
+
+.socialMedia a:hover {
+    transform: translateY(-5px);
+    background-color: white;
+    border: 1px solid limegreen;
+}
+
+.socialMedia a:hover i {
+    color: limegreen;
+}
+
+.messageForm {
+    width: 100%;
+}
+
+.messageForm .inputGroup {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.messageForm input,
+.messageForm textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 0px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #a6a6a6;
+    outline: none;
+}
+
+.messageForm textarea {
+    resize: none;
+    height: 220px;
+}
+
+.messageForm label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #a6a6a6;
+    transition: 0.3s;
+}
+
+.messageForm input:focus+label,
+.messageForm input:valid+label,
+.messageForm textarea:focus+label,
+.messageForm textarea:valid+label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: limegreen;
+}
+
+.inputGroup button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: limegreen;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup button:hover {
+    background-color: white;
+    color: limegreen;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid limegreen;
+}
+
+@media(max-width: 900px) {
+    .container .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        flex-basis: 100%;
+        margin: 0 0 20px;
+    }
+
+    .socialMedia a {
+        margin-right: 10px;
+        /* Reduce margin for smaller screens */
+    }
+}
